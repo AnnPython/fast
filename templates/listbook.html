@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All books
+{% endblock %}
+
+{% block body %}
+<main role="main" class="container">
+    <h1 class="mt-5">All book list</h1>
+    {% for book in books %}
+    <div class="alert alert-info">
+        <h3>{{ book.bookname }}</h3>
+        <p>{{ book.author }}</p>
+        <p>{{ book.year_publish }}</p>
+        <p>{{ book.amount_page }}</p>
+       
+    </div>
+    {% endfor %}
+</main>
+{% endblock %}
